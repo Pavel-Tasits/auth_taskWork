@@ -10,8 +10,10 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import HomePage from 'containers/HomePage/Loadable';
-import NotFoundPage from 'containers/NotFoundPage/Loadable';
+import HomePage from '../HomePage/Loadable';
+import NotFoundPage from '../NotFoundPage/Loadable';
+import SignInPage from '../SignInPage/Loadable';
+import SignUpPage from '../SignUpPage/Loadable';
 
 import GlobalStyle from '../../global-styles';
 
@@ -20,6 +22,8 @@ export default function App() {
     <div>
       <Switch>
         <Route exact path="/" component={HomePage} />
+        <Route exact path="/sign_in" component={SignInPage} />
+        <Route exact path="/sign_up" component={SignUpPage} />
         <Route component={NotFoundPage} />
       </Switch>
       <GlobalStyle />
